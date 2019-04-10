@@ -1,0 +1,7 @@
+echo Creating release file structure
+mkdir -p GameData/AutoAGL
+cp ../files/changelog.txt GameData/AutoAGL
+cp ../LICENSE GameData/AutoAGL
+cp ../README.md GameData/AutoAGL
+cp ../src/bin/Release/AutoAGL.dll GameData/AutoAGL
+echo Done.
