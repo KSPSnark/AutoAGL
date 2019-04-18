@@ -91,6 +91,9 @@ namespace AutoAGL
         public string ParachuteAltitudeSetting = PARACHUTE_ALTITUDE_MULTIPLIERS.DefaultLabel;
         private const string ParachuteAltitudeSettingName = "ParachuteAltitudeSetting";
 
+        [GameParameters.CustomParameterUI("Enable path projection", toolTip = "When checked, does extra calcs to spot approaching high terrain.")]
+        public bool EnablePathProjectionSetting = true;
+
         /// <summary>
         /// Gets whether the mod is enabled or not.
         /// </summary>
@@ -157,6 +160,14 @@ namespace AutoAGL
                         return AltimeterDisplayState.DEFAULT;
                 }
             }
+        }
+
+        /// <summary>
+        /// Gets whether path projection is enabled.
+        /// </summary>
+        public static bool IsPathProjectionEnabled
+        {
+            get { return Instance.EnablePathProjectionSetting; }
         }
 
         /// <summary>
